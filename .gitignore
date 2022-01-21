@@ -4,3 +4,4 @@ clover.xml
 vendor/
 composer.lock
 tests/fixtures/*.*
+.idea
