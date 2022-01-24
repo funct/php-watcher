@@ -81,7 +81,7 @@ final class Screen
         if ($exitCode === 0) {
             $this->info('clean exit - waiting for changes before restart');
         } else {
-            $this->warning('app crashed - waiting for file changes before starting...');
+            $this->warning(sprintf('app crashed (%s) - waiting for file changes before starting...', $exitCode));
         }
     }
 
