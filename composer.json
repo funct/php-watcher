@@ -1,5 +1,5 @@
 {
-    "name": "funct/php-watcher",
+    "name": "funct-gmbh/php-watcher",
     "type": "library",
     "description": "Automatically restart PHP application once the source code changes",
     "license": "MIT",
