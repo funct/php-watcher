@@ -34,7 +34,8 @@
         "react/child-process": "^0.6.1",
         "react/stream": "^1.0.0",
         "symfony/finder": "^4.3 || ^5.0 || ^6.0",
-        "alecrabbit/php-cli-snake": "^0.5"
+        "alecrabbit/php-cli-snake": "^0.5",
+        "react/promise": "^2.8"
     },
     "autoload": {
         "psr-4": {
