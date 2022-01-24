@@ -1,14 +1,13 @@
 # PHP-watcher
 
-[![PHP Version](https://img.shields.io/packagist/php-v/seregazhuk/php-watcher.svg)](https://php.net/)
-[![Build Status](https://travis-ci.org/seregazhuk/php-watcher.svg?branch=master)](https://travis-ci.org/seregazhuk/php-watcher)
-[![Total Downloads](https://poser.pugx.org/seregazhuk/php-watcher/downloads)](https://packagist.org/packages/seregazhuk/php-watcher)
+[![PHP Version](https://img.shields.io/packagist/php-v/funct-gmbh/php-watcher.svg)](https://php.net/)
+[![Total Downloads](https://poser.pugx.org/funct-gmbh/php-watcher/downloads)](https://packagist.org/packages/funct-gmbh/php-watcher)
 
-[![Latest Stable Version](https://poser.pugx.org/seregazhuk/php-watcher/v/stable)](https://packagist.org/packages/seregazhuk/php-watcher)
-[![Latest Version](https://img.shields.io/packagist/v/seregazhuk/php-watcher.svg)](https://packagist.org/packages/seregazhuk/php-watcher)
-[![Latest Unstable Version](https://poser.pugx.org/seregazhuk/php-watcher/v/unstable)](https://packagist.org/packages/seregazhuk/php-watcher)
+[![Latest Stable Version](https://poser.pugx.org/funct-gmbh/php-watcher/v/stable)](https://packagist.org/packages/funct-gmbh/php-watcher)
+[![Latest Version](https://img.shields.io/packagist/v/funct-gmbh/php-watcher.svg)](https://packagist.org/packages/funct-gmbh/php-watcher)
+[![Latest Unstable Version](https://poser.pugx.org/funct-gmbh/php-watcher/v/unstable)](https://packagist.org/packages/funct-gmbh/php-watcher)
 
-[![License](https://poser.pugx.org/seregazhuk/php-watcher/license)](https://packagist.org/packages/seregazhuk/php-watcher)
+[![License](https://poser.pugx.org/funct-gmbh/php-watcher/license)](https://packagist.org/packages/funct-gmbh/php-watcher)
 
 ![watcher logo](images/watcher.gif)
 
@@ -43,7 +42,7 @@ PHP-watcher does not require any additional changes to your code or method of
 You can install this package globally like this:
 
 ```bash
-composer global require seregazhuk/php-watcher
+composer global require funct-gmbh/php-watcher
 ```
 
 After that phpunit-watcher watch can be run in any directory on your system.
@@ -52,7 +51,7 @@ Alternatively, you can install the package locally as a dev dependency in your
  project:
 
 ```bash
-composer require seregazhuk/php-watcher --dev
+composer require funct-gmbh/php-watcher --dev
 ```
 Locally installed you can run it with `vendor/bin/php-watcher`.
 
@@ -245,15 +244,10 @@ manually with option '--no-spinner':
 php-watcher server.php --no-spinner
 ```
 
+## Attribution
+
+Based on the work of [funct-gmbh/php-watcher](https://github.com/funct-gmbh/php-watcher)
+
 # License
 
 MIT [http://rem.mit-license.org](http://rem.mit-license.org)
-
-## How can I thank you?
-
-Why not star this GitHub repo? I'd love the attention!
-Or, you can donate to my project on PayPal:
-
-[![Support me with some coffee](https://img.shields.io/badge/donate-paypal-orange.svg)](https://www.paypal.me/seregazhuk)
-
-Thanks! 
