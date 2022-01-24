@@ -246,7 +246,7 @@ php-watcher server.php --no-spinner
 
 ## Attribution
 
-Based on the work of [funct-gmbh/php-watcher](https://github.com/funct-gmbh/php-watcher)
+Based on the work of [seregazhuk/php-watcher](https://github.com/seregazhuk/php-watcher)
 
 # License
 
