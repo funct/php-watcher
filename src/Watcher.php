@@ -31,8 +31,9 @@ final class Watcher
         $this->filesystemListener->start($watchList);
         $this->filesystemListener->onChange(
             static function () use ($processRunner, $signal, $delayToRestart) {
-                $processRunner->stop($signal);
-                $processRunner->restart($delayToRestart);
+                $processRunner
+                    ->stop($signal)
+                    ->then(fn() => $processRunner->restart($delayToRestart));
             }
         );
 

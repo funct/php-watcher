@@ -4,8 +4,11 @@ namespace seregazhuk\PhpWatcher;
 
 use React\ChildProcess\Process as ReactPHPProcess;
 use React\EventLoop\LoopInterface;
+use React\Promise\Deferred;
+use React\Promise\PromiseInterface;
 use RuntimeException;
 use seregazhuk\PhpWatcher\Screen\Screen;
+use function React\Promise\resolve;
 
 final class ProcessRunner
 {
@@ -31,15 +34,27 @@ final class ProcessRunner
         $this->subscribeToProcessOutput();
     }
 
-    public function stop(int $signal): void
+    public function stop(int $signal): PromiseInterface
     {
+        if (false === $this->process->isRunning()) {
+            return resolve();
+        }
+
+        $defered = new Deferred();
+
+        $exitHandler = function () use ($defered, &$exitHandler) {
+            $this->process->removeAllListeners();
+            $defered->resolve();
+        };
+        $this->process->on('exit', $exitHandler);
         $this->process->terminate($signal);
-        $this->process->removeAllListeners();
+
+        return $defered->promise();
     }
 
     public function restart(float $delayToRestart): void
     {
-        $this->screen->restarting($this->process->getCommand());
+        $this->screen->restarting();
         $this->loop->addTimer($delayToRestart, [$this, 'start']);
     }
 
